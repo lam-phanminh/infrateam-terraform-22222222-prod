@@ -36,7 +36,7 @@ jobs:
 
       - uses: mdecoleman/pr-branch-name@1.2.0
         id: branchname
-        with:
+        # with:
           # repo-token: ${{ secrets.GH_TOKEN }}
           
       - run: echo ${{ steps.branchname.outputs.branch }}     
