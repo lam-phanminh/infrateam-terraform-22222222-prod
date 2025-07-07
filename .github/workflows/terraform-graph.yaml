@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
         with: 
           fetch-depth: '0'
-          # token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
@@ -36,8 +36,8 @@ jobs:
 
       - uses: mdecoleman/pr-branch-name@1.2.0
         id: branchname
-        # with:
-          # repo-token: ${{ secrets.GH_TOKEN }}
+        with:
+          repo-token: ${{ secrets.GH_TOKEN }}
           
       - run: echo ${{ steps.branchname.outputs.branch }}     
       
